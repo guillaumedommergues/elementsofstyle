@@ -11,8 +11,10 @@ deploy_model: code to deploy the site as a web application.
 ## Run the code used to create the model
 (needs Anaconda or Miniconda)
 ```
-conda create -n python=3.5 <env-name>
-conda install requirements.txt
+conda create -n <env name> python=3.5
+conda install --yes --file requirements.txt
+source activate <env name>
+jupyter notebook
 ```
 
 
