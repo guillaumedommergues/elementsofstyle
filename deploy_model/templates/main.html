@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Elements of style</title>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h1 class="display-4 text-danger">Elements of style</h1>
+        <p class="lead text-danger">Computer vision to recognize furniture style.</p>
+        <hr class="my-4">
+        <p>If you ever walked sat in a chair and felt like it was probably a Louis-something, but which one you could not tell... This page is for you. Upload any picture of any piece of furniture to determine its style.</p>
+        <form enctype="multipart/form-data" method="post" action="/">
+          <div class="form-group">
+            
+            <input type="file" name="file" class="form-control-file" id="file_input">
+          </div>
+          <button type="submit" class="btn btn-danger btn-md">check  style</button>
+        </form>
+        <div>
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+               <h1 class="display-3 text-center"> {{ message }} </h3>
+              {% endfor %} 
+            {% endif %}
+           {% endwith %} 
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="jumbotron">
+         ​<picture>
+          <source media="(min-width: 480px)" srcset="static/horizontal.png" type="image/svg+xml">
+          <img src="static/vertical.png" class="img-fluid img-thumbnail" alt="...">
+        </picture>
+      </div>
+    </div>
+
+
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h4> About the styles </h4>
+          <p><strong class="text-danger">Henri IV, Louis XIII - </strong>At the dawn of the XVIIth century, Henri IV invited foreign furniture makers to France. The country quickly started to set European design trends with heavy furniture, ample use of spiral-turned columns and inlaid marquetery.
+        </p>
+          <p><strong class="text-danger">Baroque - </strong>The Baroque style blossommed in the late XVIIth and early XVIIIth centuries under the grandiose Louis XIV and more comfortable Louis XV style. Commodes replaced chests. Armchairs and sofas replaced chairs. Lines became curved and decorations exuberant.
+        </p>
+          <p><strong class="text-danger">Neoclassicism - </strong>The first phase of Neoclassicism, the Louis XVI style, featured simpler, straighter lines and patterns borrowed from ancient Rome. Neoclassicism culminated under the Empire style, with classical but also Egyptian influence.
+        </p>
+          <p><strong class="text-danger">Art Nouveau - </strong>Art Nouveau revolutionized furniture design at the end of the XIXth century by taking inspiration from the complex shapes of nature: plants, animals, insects.
+        </p>
+          <p><strong class="text-danger">Art Deco - </strong>Between World War I and World War II, furniture makers were inspired by the cubist esthetic and exotic art from Asia and Africa. Bright colors, straight lines, bold patterns defined the new Art Deco style.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h4> About the model </h4>
+          <p><strong class="text-danger">Motivation - </strong>Prove that a computers can recognize not only objects, but also styles. A Louis XVI chair is arguably more similar to any other chair than to a Louis XVI table, yet the model is able to group the chair and the table together. 
+        </p>
+          <p><strong class="text-danger">Accuracy - </strong>80% accuracy on the test set. Quite impressive since most humans would do no better than a random guess (ie 25% accuracy) and since styles can be ambiguous (early Louis XIV is very close to Louis XIII for instance).
+        </p>
+          <p><strong class="text-danger">Code - </strong>Transfer learning starting from a Resnet 50 model. More details <a href="https://github.com/guillaumedommergues/elementsofstyle">here</a>. 
+        </p>
+      </div>
+    </div>
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
